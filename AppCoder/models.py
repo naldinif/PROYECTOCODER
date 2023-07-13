@@ -5,6 +5,9 @@ class Curso(models.Model):
     nombre = models.CharField(max_length=40)
     camada = models.IntegerField()
 
+    def __str__(self):
+        return f"Nombre: {self.nombre} - Camada: {self.camada}"
+
 class Estudiante(models.Model):
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
@@ -16,8 +19,9 @@ class Profesor(models.Model):
     email = models.EmailField()
     profesion = models.CharField(max_length=30)
 
-class Entregable(models.Model):
-    nombre = models.CharField(max_length=30)
-    fecha_entrega = models.DateField()
-    entregado = models.BooleanField()
+    def __str__(self):
+        return f"Nombre: {self.nombre} - Apellido: {self.apellido} - E-Mail: {self.email} - Profesión: {self.profesion}"
 
+class Entregable(models.Model):
+    entrega = models.CharField(max_length=30)
+   

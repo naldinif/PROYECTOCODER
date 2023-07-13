@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>ProyectoCoder - AppCoder</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="AppCoder/assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'AppCoder/css/styles.css' %}" rel="stylesheet" />
+    <style>
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+            <a class="navbar-brand" href="{% url 'BusquedaCamada' %}">Busqueda Camada</a>
+            <a class="navbar-brand" href="{% url 'Cursos' %}">Cursos</a>
+            <a class="navbar-brand" href="{% url 'Profesores' %}">Profesores</a>
+            <a class="navbar-brand" href="{% url 'Estudiantes' %}">Estudiantes</a>
+            <a class="navbar-brand" href="{% url 'Entregables' %}">Entregables</a>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="text-center text-white">
+                        <!-- Page heading-->
+                        <h1 class="mb-5">Tercera preentrega - CODERHOUSE - PYTHON</h1>
+                        <!-- Signup form-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Esto es lo que cambia -->
+    {% block contenidoQueCambia %}
+
+    {% endblock %}
+
+    <!-- Footer-->
+    <footer>
+        <div class="container">
+            <p>Franco Naldini | Email: franco.naldini98@gmail.com | Teléfono: 2604392862</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{% static 'AppCoder/js/scripts.js' %}"></script>
+</body>
+</html>
